@@ -118,15 +118,15 @@ class Downloader:
                 self._download_retcode = ytdl._download_retcode
                 return files
         except DownloadError as e:
-            logger.error("[DownloadError] : Failed to Download Video")
+            logger.error("[DownloadError] : خطا در دانلود")
             raise DownloadFailedError(str(e)) from e
         except GeoRestrictedError:
             logger.error(
-                "[GeoRestrictedError] : The uploader has not made this video"
+                "[GeoRestrictedError] : خطا در اپلود"
                 " available in your country"
             )
         except Exception as e:
-            logger.error(f"Something Went Wrong. ERROR: {e}")
+            logger.error(f"با خطا مواجه شدم. ارور: {e}")
 
     async def download(
         self,
@@ -175,7 +175,7 @@ class Downloader:
                 raise StopTransmission
 
             if prog_data.get("status") == "finished":
-                progress = "🔄  Download finished, Uploading..."
+                progress = "🔄  دانلود تموم شد, در حال اپلود..."
             elif last_update_time is None or (now - last_update_time) >= edit_rate:
                 # ------------ Progress Data ------------ #
                 if not (
