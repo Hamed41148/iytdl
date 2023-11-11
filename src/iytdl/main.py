@@ -32,7 +32,7 @@ class iYTDL(Extractor, Downloader, Uploader):
         silent: bool = False,
         download_path: str = "downloads",
         loop: Optional[asyncio.AbstractEventLoop] = None,
-        default_thumb: str = "https://missuo.ru/file/94bd47a083d94e1e4754a.jpg",
+        default_thumb: str = "https://i.imgur.com/4LwPLai.png",
         cache_path: str = "",
         delete_media: bool = False,
         external_downloader: Optional[types.ExternalDownloader] = None,
