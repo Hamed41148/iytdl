@@ -223,7 +223,7 @@ class iYTDL(Extractor, Downloader, Uploader):
                         [
                             [
                                 InlineKeyboardButton(
-                                    "⚙️ Extract Info",
+                                    "⚙️ دریافت اطلاعات",
                                     callback_data=f"yt_extract_info|{yt_id}",
                                 )
                             ]
@@ -244,7 +244,7 @@ class iYTDL(Extractor, Downloader, Uploader):
                         [
                             [
                                 InlineKeyboardButton(
-                                    "⚙️ Extract Info",
+                                    "⚙️ دریافت اطلاعات",
                                     callback_data=f"yt_extract_info|{key}",
                                 )
                             ]
@@ -272,7 +272,7 @@ class iYTDL(Extractor, Downloader, Uploader):
                     enumerate(cached_data, start=1),
                 )
             )
-            telegraph = await self.paste_to_tg("📜  LIST VIEW", content)
+            telegraph = await self.paste_to_tg("📜 لیست خروجی ها", content)
             buttons = Buttons(
                 [
                     [
