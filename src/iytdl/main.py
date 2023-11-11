@@ -277,13 +277,13 @@ class iYTDL(Extractor, Downloader, Uploader):
                 [
                     [
                         InlineKeyboardButton(
-                            "↗️  Click To Open",
+                            "↗️ باز کن",
                             url=telegraph,
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            "📰  Detailed View",
+                            "📰  جمع بندی",
                             callback_data=f"yt_next|{key}|0",
                         )
                     ],
