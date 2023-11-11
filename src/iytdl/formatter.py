@@ -129,7 +129,7 @@ def gen_search_markup(
     buttons = [
         [
             InlineKeyboardButton(
-                text="⬅️  Back",
+                text="⬅️  بازگشت",
                 callback_data=f"yt_back|{key}|{page}",
             ),
             InlineKeyboardButton(
@@ -139,11 +139,11 @@ def gen_search_markup(
         ],
         [
             InlineKeyboardButton(
-                text="📜  List All",
+                text="📜  لیست",
                 callback_data=f"yt_listall|{key}",
             ),
             InlineKeyboardButton(
-                text="⬇️  Download",
+                text="👌مجموعه پارس👌",
                 callback_data=f"yt_extract_info|{yt_id}",
             ),
         ],
