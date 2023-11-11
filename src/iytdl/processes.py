@@ -96,5 +96,5 @@ class Process:
         if self.__cb_extra:
             cb_data += f"-{self.__cb_extra}"
         return InlineKeyboardMarkup(
-            [[InlineKeyboardButton("❌ Cancel", callback_data=cb_data)]]
+            [[InlineKeyboardButton("✖️ حذف", callback_data=cb_data)]]
         )
