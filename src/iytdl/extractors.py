@@ -47,17 +47,17 @@ class Extractor:
         buttons = [
             [
                 InlineKeyboardButton(
-                    "⭐️ BEST - 📹 Video", callback_data=f"yt_gen|{key}|mp4|v"
+                    "⭐️ 2160p - 📹 ویدیو", callback_data=f"yt_gen|{key}|mp4|v"
                 ),
                 InlineKeyboardButton(
-                    "⭐️ BEST - 🎧 Audio", callback_data=f"yt_gen|{key}|mp3|a"
+                    "⭐️ MP3 - 🎧 صوتی", callback_data=f"yt_gen|{key}|mp3|a"
                 ),
             ]
         ]
         err_btn = [
             [
                 InlineKeyboardButton(
-                    "💔 ERROR", callback_data="errhrrr"
+                    "💔 ارور", callback_data="errhrrr"
                 ),
             ]
         ]
@@ -185,10 +185,10 @@ class Extractor:
         buttons = [
             [
                 InlineKeyboardButton(
-                    "⭐️ BEST - 📹 MKV", callback_data=f"yt_dl|{yt_id}|mkv|v"
+                    "⭐️ +2160p - 📹 MKV", callback_data=f"yt_dl|{yt_id}|mkv|v"
                 ),
                 InlineKeyboardButton(
-                    "⭐️ BEST - 📹 MP4",
+                    "⭐️ +2160p - 📹 MP4",
                     callback_data=f"yt_dl|{yt_id}|mp4|v",
                 ),
             ]
@@ -196,7 +196,7 @@ class Extractor:
         best_audio_btn = [
             [
                 InlineKeyboardButton(
-                    "⭐️ BEST - 🎵 320Kbps - MP3",
+                    "⭐️ بهترین کیفیت - 🎵 320Kbps - MP3",
                     callback_data=f"yt_dl|{yt_id}|mp3|a",
                 )
             ]
