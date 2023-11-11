@@ -332,7 +332,7 @@ class Uploader:
                         __get_inputs(uploaded), reply_markup=InlineKeyboardMarkup(sup_btn)
                     )
                 return await uploaded.delete()
-            new_caption = "**🗂 Files Splitted Because More Than 2GB**\n\n"
+            new_caption = "**🗂 به دلیل محدودیت تلگرام برای اپلود فایل های بیشتر 2 گیگابایت، فایل ها تقسیم شدند. 2GB**\n\n"
             m = await process.edit(new_caption)
             uploads, child_up = [], []
             for ups in uploaded:
