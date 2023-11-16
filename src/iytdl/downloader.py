@@ -199,19 +199,19 @@ class Downloader:
                     )
                     # ---------------------------------------- #
                     progress = f"""
-<i>Downloading:</i>  <code>{filename}</code>
-<b>Completed:</b>  <code>{humanbytes(current)} / {humanbytes(total)}</code>
-<b>Progress:</b>  <code>{progress_bar} {percentage} %</code>
-<b>Speed:</b>  <code>{humanbytes(speed)}</code>
-<b>ETA:</b>  <code>{time_formater(eta)}</code>
+<i>درحال دانلود:</i>  <code>{filename}</code>
+<b>تکمیل شده:</b>  <code>{humanbytes(current)} / {humanbytes(total)}</code>
+<b>پیشرفت:</b>  <code>{progress_bar} {percentage} %</code>
+<b>سرعت:</b>  <code>{humanbytes(speed)}</code>
+<b>زمان تخمیلی تا پایان دانلود:</b>  <code>{time_formater(eta)}</code>
 """
                 else:
                     # Total is None, Generic progress bar
                     progress = f"""
-<i>Downloading:</i>  <code>{filename}</code>
-<b>Completed:</b>  <code>{humanbytes(current)} / [N/A]</code>
-<b>Speed:</b>  <code>-</code>
-<b>ETA:</b>  <code>-</code>
+<i>درحال دانلود:</i>  <code>{filename}</code>
+<b>تکمیل شده:</b>  <code>{humanbytes(current)} / [N/A]</code>
+<b>سرعت:</b>  <code>-</code>
+<b>زمان تخمیلی تا پایان دانلود:</b>  <code>-</code>
 """
             else:
                 return
