@@ -24,7 +24,7 @@ async def progress(
         client: Client, 
         process: Process, 
         filename: str, 
-        mode: str = "upload", 
+        mode: str = "آپلود", 
         edit_rate: int = 8, 
         total_file: dict = None
     ):
@@ -52,7 +52,7 @@ async def progress(
             return
         del _PROGRESS[process.id]
         try:
-            await process.edit(f"`Finalizing {mode} process ...`")
+            await process.edit(f"`فرایند {mode} درحال نهایی شدن ...`")
         except FloodWait as f_w:
             await asyncio.sleep(f_w.value + 2)
         except MessageNotModified:
@@ -71,12 +71,12 @@ async def progress(
         progress_bar = f"[{'█' * floor(15 * percentage / 100)}{'░' * floor(15 * (1 - percentage / 100))}]"
 
         progress = f"""
-<i>{mode.title()}ing:</i>  <code>{filename}</code>
-<b>Completed:</b>  <code>{humanbytes(current)} / {humanbytes(total)}</code>
-<b>Files:</b>  <code>[ {x} / {y} ]</code>
-<b>Progress:</b>  <code>{progress_bar} {percentage} %</code>
-<b>Speed:</b>  <code>{humanbytes(speed)}</code>
-<b>ETA:</b>  <code>{time_formater(eta)}</code>
+<i>درحال آپلود:</i>  <code>{filename}</code>
+<b>تکمیل شده:</b>  <code>{humanbytes(current)} / {humanbytes(total)}</code>
+<b>تعداد فایل ها:</b>  <code>[ {x} / {y} ]</code>
+<b>پیشرفت:</b>  <code>{progress_bar} {percentage} %</code>
+<b>سرعت:</b>  <code>{humanbytes(speed)}</code>
+<b>زمان تخمیلی تا پایان عملیات:</b>  <code>{time_formater(eta)}</code>
 """
 
         try:
